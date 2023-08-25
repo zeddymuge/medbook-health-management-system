@@ -1,0 +1,29 @@
+<ion-content>
+  <ion-item>
+    <ion-label>Name of patient</ion-label>
+    <ion-input [(ngModel)]="name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Date of birth</ion-label>
+    <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="dob"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label>Gender</ion-label>
+    <ion-select [(ngModel)]="gender">
+      <ion-select-option value="Male">Male</ion-select-option>
+      <ion-select-option value="Female">Female</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Type of service</ion-label>
+    <ion-select [(ngModel)]="service">
+      <ion-select-option value="Outpatient">Outpatient</ion-select-option>
+      <ion-select-option value="Inpatient">Inpatient</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>General comments</ion-label>
+    <ion-textarea [(ngModel)]="comments"></ion-textarea>
+  </ion-item>
+  <ion-button (click)="savePatient()">Save</ion-button>
+</ion-content>

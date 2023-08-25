@@ -1,0 +1,9 @@
+<ion-table>
+  <ion-tr *ngFor="let patient of patients" [appHighlightMostVisits]="patient.mostVisits">
+    <ion-td>{{ patient.name }}</ion-td>
+    <ion-td>{{ patient.dateOfBirth | dateFormat }}</ion-td>
+    <ion-td>{{ patient.gender }}</ion-td>
+    <ion-td>{{ patient.serviceType }}</ion-td>
+    <ion-td>{{ patient.comments }}</ion-td>
+  </ion-tr>
+</ion-table>
